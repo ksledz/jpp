@@ -1,5 +1,8 @@
 module Eval (
   Data(..),
+  Expr(..),
+  Primitive(..),
+  eval,
   test1
 ) where
 
@@ -9,17 +12,22 @@ import Data.Maybe
 type Env = Map.Map String Data
 
 data Primitive = Primitive Int ([Data] -> Data)
+instance Show Primitive where
+  show (Primitive x _) = "primitive" ++ show x
+
 
 data Data = DInt Int
   | DBool Bool
   | DLambda String Expr Env
   | DPrimitive Primitive Int [Data]
+  deriving Show
 
 data Expr = EVar String
   | EData Data
   | ELambda String Expr
   | EApply Expr Expr
   | ELet [(String, Expr)] Expr
+  deriving Show
 
 eval :: Expr -> Env -> Data
 eval (EData x) _  = x
@@ -39,6 +47,8 @@ eval (ELet x e1) env = let
   newEnv = foldl (\env1 (s,e) -> Map.insert s (eval e newEnv) env1) env x
   in eval e1 newEnv
 
+
+-- __primitiveif
 
 test1 = eval (EData $ DInt 5) Map.empty
 

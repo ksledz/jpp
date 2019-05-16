@@ -1,8 +1,6 @@
 module Main where
 
 import Eval
-
+import Parser
 main :: IO ()
-main = let
-  DInt n = test1
-  in print n
+main = test
