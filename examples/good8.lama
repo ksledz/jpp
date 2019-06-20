@@ -1,0 +1,4 @@
+# partial application
+let sum = \a b -> a + b
+and plus5 = sum 5
+in plus5 3 == 8 && plus5 8 == 13

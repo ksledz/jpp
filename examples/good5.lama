@@ -1,0 +1,4 @@
+# list tests
+let x = cons 2 (cons 1 empty) in head x == head(tail x) + 1
+&& (is_empty (cons 1 empty)) == False
+&& 1 + (head (tail (cons 2 (cons 1 empty)))) == head (cons 2 (cons 1 empty))

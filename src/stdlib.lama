@@ -1,0 +1,8 @@
+# standard library
+# head tail cons empty is_empty
+let empty = \c1 c2 -> c1
+and cons = \head tail -> \c1 c2 -> c2 head tail
+and is_empty = \list -> list True (\h t -> False)
+and head = \list -> list undefined (\h t -> h)
+and tail = \list -> list undefined (\h t -> t)
+in

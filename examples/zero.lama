@@ -1,0 +1,1 @@
+let zero = \x -> if x == 0 then True else False in (zero 5 == False) && (zero 0 == True)

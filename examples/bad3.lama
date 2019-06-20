@@ -1,0 +1,2 @@
+#runtime error - 0 division
+let x = 666 / 0 in x

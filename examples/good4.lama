@@ -1,0 +1,2 @@
+# empty list test
+is_empty empty == True

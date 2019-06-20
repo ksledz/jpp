@@ -1,0 +1,2 @@
+# parse error: using a keyword
+let else = 7 in else

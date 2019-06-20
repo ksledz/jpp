@@ -1,0 +1,2 @@
+#multi argument function with a name
+let if_t = \b c-> if b then 42 + c * 666 else 13 in if_t (30 < 50) 2137 ==  1423284

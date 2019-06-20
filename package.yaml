@@ -1,10 +1,10 @@
 name:                jpp
 version:             0.1.0.0
-github:              "Github username here/jpp"
+github:              "ksledz/jpp"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "Author email here"
-copyright:           "2018 Author name here"
+author:              "Kamila Sledz"
+maintainer:          "ks386105@students.mimuw.edu.pl"
+copyright:           "2019 Kamila Sledz"
 
 extra-source-files:
 - README.md
@@ -21,7 +21,10 @@ description:         Please see the README on GitHub at <https://github.com/Gith
 
 dependencies:
 - base >= 4.7 && < 5
-
+- containers >= 0.6.0.1 && < 0.7
+- megaparsec >= 7.0.0 && < 7.1
+- parser-combinators >= 1.0.0 && < 1.1
+- process >= 1.6.5
 library:
   source-dirs: src
 

@@ -1,0 +1,9 @@
+let max = \list ->
+  if is_empty(tail list)
+  then head list
+  else
+    if head list > max (tail list)
+    then head list
+    else max (tail list)
+and list = (cons 2 (cons 1 (cons 3 (cons 7 empty))))
+in max list == 7

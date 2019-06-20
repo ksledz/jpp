@@ -1,0 +1,6 @@
+# fibonacci
+let fib = \list ->
+    if (is_empty list)
+    then (cons 1 (cons 1 empty))
+    else (cons (head list + head (tail list)) list)
+in head (fib (fib (fib (fib empty)))) == 5
